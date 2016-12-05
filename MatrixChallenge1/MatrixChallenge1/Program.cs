@@ -11,6 +11,40 @@ namespace MatrixChallenge1
         static void Main(string[] args)
         {
             int rows, cols;
+            
+            #region header
+            var psh = "+----------------------------------------------+\n" +
+            "|                                              |\n" +
+            "|    XXX                 X                     |\n" +
+            "|    XX XXXX              X                    |\n" +
+            "|    XX    XX            XX                    |\n" +
+            "|    X     XX           XX                     |\n" +
+            "|    X     XX  XXX       X                     |\n" +
+            "|    XX    XX  XX XXX     X XXXXXXX            |\n" +
+            "|    XXXXXXX   XX         XXX     XX           |\n" +
+            "|    X          XXXX      XX       X           |\n" +
+            "|    X             XXX    XX       X           |\n" +
+            "|    X         X     XX    X       X           |\n" +
+            "|    X         XXXXXXXX   XX       X   X X X X |\n" +
+            "|   X                                          |\n" +
+            "|                                              |\n" +
+            "+ ---------------------------------------------+" +
+            "";
+            var wylat = @"
+                 ||                  
+  ....  ... ... ...    ... .   ...   
+.|...||  '|..'   ||   || ||  .|  '|. 
+||        .|.    ||    |''   ||   || 
+ '|...' .|  ||. .||.  '||||.  '|..|' 
+                     .|....'         
+                                     
+            ";
+            #endregion
+            Console.ForegroundColor = ConsoleColor.Yellow ;
+            Console.WriteLine(psh);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(wylat);
+            #region Matrix 1 input
             //Matrix1
             Console.WriteLine("MATRIX 1!");
             Console.WriteLine("How many rows would you like?");
@@ -35,6 +69,9 @@ namespace MatrixChallenge1
                 }
                 Console.WriteLine();
             }
+            #endregion
+
+            #region Matrix 2 input
             //Matrix 2
             Console.WriteLine("MATRIX 2!");
 
@@ -60,7 +97,10 @@ namespace MatrixChallenge1
                 }
                 Console.WriteLine();
             }
-            //Addition
+            #endregion
+
+            #region Addition & Output
+            //Addition & Output to
             //Matrix 3
             Console.WriteLine("MATRIX 3 = MATRIX 1 + MATRIX 2!");
             int[,] mat3 = new int[rows, cols]; //https://msdn.microsoft.com/en-us/library/2yd9wwz4.aspx 2D array init.
@@ -81,6 +121,7 @@ namespace MatrixChallenge1
                 Console.WriteLine();
             }
             Console.ReadLine();
+            #endregion
         }
     }
 }
